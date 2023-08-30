@@ -9,7 +9,7 @@ final class PracticaTest extends TestCase
     {
         $this->assertFileExists('index.php');
         $this->assertFileExists('store.php');
-        $this->assertFileExists('conexion.php');
+        $this->assertFileExists('connect.php');
     }
 
     public function testForm(): void
@@ -34,7 +34,6 @@ final class PracticaTest extends TestCase
         $response = $client->post('http://localhost/practica-php/store.php', [
                 'form_params' => [
                     'nombre' => 'Prueba Nombre',
-                    'correo' => 'prueba@test.com',
                 ]
             ]);
 
